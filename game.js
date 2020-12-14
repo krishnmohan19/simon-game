@@ -17,7 +17,7 @@ $(document).keypress(function(){
     
 });
 
-document.querySelector(document).addEventListener('touchstart',touchStart,false);
+document.querySelector('body').addEventListener('touchstart',touchStart,false);
 
 function touchStart(e){
     e.preventDefault();
