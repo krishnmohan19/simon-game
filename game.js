@@ -17,6 +17,18 @@ $(document).keypress(function(){
     
 });
 
+document.querySelector('body').addEventListener('touchstart',touchStart,false);
+
+function touchStart(e){
+    e.preventDefault();
+    if(!started){
+        $("#level-title").text("level "+level);
+        nextSequence();
+        started=true;
+    }
+}
+
+
 $(".btn").click(function(){
 
     var userChosenColour=$(this).attr("id");
